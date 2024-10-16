@@ -9,13 +9,13 @@ import MainContext from "./context/Context.jsx";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    <Router>
-      <Provider store={store}>
-        <MainContext>
+    <Provider store={store}>
+      <MainContext>
+        <Router>
           <App />
-          <Toaster position="top-center" reverseOrder={false} />
-        </MainContext>
-      </Provider>
-    </Router>
+        </Router>
+        <Toaster position="top-center" reverseOrder={false} />
+      </MainContext>
+    </Provider>
   </BrowserRouter>
 );
